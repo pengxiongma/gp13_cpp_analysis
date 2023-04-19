@@ -1,11 +1,6 @@
-# gp13_cpp_analysis
-
 # use conda to install ROOT, https://root.cern/install/#conda
-
 #Just call once to make dictionary
 rootcling -f EventDict.cxx -c EventLinkDef.h
-
-
 #g++ -w -o read.out _Read_file.cpp  EventDict.cxx    $(root-config --cflags --libs)   -lMinuit
 g++ -w -o exe.out  _Analysis_gp13_ByPengxiong.cpp  EventDict.cxx    $(root-config --cflags --libs)   -lMinuit
 ./exe.out /home/mapx/mapx/DunhuangData/ROOTFile/TD/Calibration_20dB_XY_GRAND.TEST-RAW-10s-ch2andch3-20dB-du78_81_82.20230417200013.013.dat.root DH_20dB_bp_GausFit_galacticnoise_Calibration_20dB_XY_GRAND.TEST-RAW-10s-ch2andch3-20dB-du78_81_82.20230417200013.013.dat.root_1078_sigma0.root 1 1078 20230417200013
